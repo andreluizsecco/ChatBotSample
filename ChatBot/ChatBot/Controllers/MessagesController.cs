@@ -11,15 +11,15 @@ namespace ChatBot.Controllers
     {
         public async Task<Message> Post([FromBody]Message message)
         {
-            //Message msg = new Message();
-            //msg.Type = "Message";
-            //msg.Created = DateTime.Now;
-            //msg.ConversationId = message.ConversationId;
-            //msg.Id = "123456";
-            //msg.Text = message.Text;
+            Message msg = new Message();
+            msg.Type = "Message";
+            msg.Created = DateTime.Now;
+            msg.ConversationId = message.ConversationId;
+            msg.Id = "123456";
+            msg.Text = message.Text;
 
-            //return await Task.FromResult<Message>(msg);
-            return await Response(message);
+            return await Task.FromResult<Message>(msg);
+            //return await Response(message);
         }
 
         private static async Task<Message> Response(Message message)
