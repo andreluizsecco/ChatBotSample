@@ -73,7 +73,6 @@ D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\System.Web.Http.WebHost.dll
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Autofac.xml
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Microsoft.Bot.Builder.xml
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Microsoft.Rest.ClientRuntime.xml
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Microsoft.WindowsAzure.Configuration.xml
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Newtonsoft.Json.xml
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\System.Net.Http.Formatting.xml
@@ -90,3 +89,12 @@ D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\zh-hans\Microsoft.Bot.Build
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\obj\Debug\ChatBot.csprojResolveAssemblyReference.cache
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\obj\Debug\ChatBot.dll
 D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\obj\Debug\ChatBot.pdb
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Microsoft.Bot.Connector.xml
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\cs\Microsoft.Bot.Builder.resources.dll
+D:\Projetos\GitHub\ChatBotSample\ChatBot\ChatBot\bin\de-dE\Microsoft.Bot.Builder.resources.dll

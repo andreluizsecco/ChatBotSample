@@ -9,28 +9,26 @@ namespace ChatBot.Controllers
 {
     public class MessagesController : ApiController
     {
-        public async Task<Message> Post([FromBody]Message message)
+        public async Task<Activity> Post([FromBody]Activity message)
         {
-            Message msg = new Message();
-            msg.Type = "Message";
-            msg.Created = DateTime.Now;
-            msg.ConversationId = message.ConversationId;
-            msg.Id = "123456";
-            msg.Text = message.Text;
+            var connector = new ConnectorClient(new Uri(message.ServiceUrl));
 
-            return await Task.FromResult<Message>(msg);
-            //return await Response(message);
+            var resposta = await Response(message);
+            var msg = message.CreateReply(resposta, "pt-BR");
+
+            await connector.Conversations.ReplyToActivityAsync(msg);
+            return await Task.FromResult<Activity>(msg);
         }
 
-        private static async Task<Message> Response(Message message)
+        private static async Task<string> Response(Activity message)
         {
-            Message resposta = new Message();
+            Activity resposta = new Activity();
             var response = await Luis.GetResponse(message.Text);
 
             if (response != null)
             {
                 var intent = new Intent();
-                var entity = new Entity();
+                var entity = new Serialization.Entity();
 
                 string acao = string.Empty;
                 string pessoa = string.Empty;
@@ -53,14 +51,14 @@ namespace ChatBot.Controllers
                 if (!string.IsNullOrEmpty(pessoa))
                 {
                     if (!string.IsNullOrEmpty(agendaInf))
-                        resposta = message.CreateReplyMessage($"OK! Entendi, mostrando {agendaInf} de {pessoa}");
+                        resposta = message.CreateReply($"OK! Entendi, mostrando {agendaInf} de {pessoa}");
                     else
-                        resposta = message.CreateReplyMessage("Não entendi qual informação vc quer do " + pessoa + ".");
+                        resposta = message.CreateReply("Não entendi qual informação vc quer do " + pessoa + ".");
                 }
                 else
-                    resposta = message.CreateReplyMessage("Não entendi qual a pessoa vc deseja a informação.");
+                    resposta = message.CreateReply("Não entendi qual a pessoa vc deseja a informação.");
             }
-            return resposta;
+            return resposta.Text;
         }
     }
 }
